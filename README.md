@@ -1,7 +1,7 @@
 ## Description
-This is a simple Java SPI demo to demonstrate the usage of Java SPI.
+This is a simple Java SPI demo that mimics Slf4J to introduce the usage of SPI.
 <!-------------------------->
-这是一个简单的Java SPI Demo，用于演示Java SPI的使用方法。
+这是一个简单的模仿 Slf4J 的日志 Java SPI demo，用于演示Java SPI的使用方法。
 
 -----
 ## What is SPI
@@ -10,9 +10,11 @@ This mechanism works by creating a file in the `META-INF/services` directory, na
 The file contains the `fully qualified names of the implementation classes, each on a new line`. By reading this file, Java can dynamically load the implementation classes.    
 In essence, SPI uses the fully qualified interface name to locate the implementation class names, and then uses reflection to instantiate these classes.   
 This process relies on conventions (such as storing the file in META-INF/services with the full interface name as the filename and the implementation class names as the file content) and reflection (dynamically loading classes using their fully qualified names).  
+SPI is extensively used in Java such as Slf4J, JDBC, and SpringBoot AutoConfiguration.  
 <!-------------------------->
 ServiceProviderInterface（SPI）是Java提供的一种服务提供接口，通过SPI可以实现在运行时动态加载实现类，而不需要在编译时就将实现类加载到项目中。SPI的实现机制是接口实现模块在`META-INF/services`目录下创建一个以`接口全限定名`为名字的文件，文件内容为`实现类的全限定名（多个实现的换行存储）`，通过读取这个文件，可以动态加载实现类。  
 SPI的本质是通过接口的全限定名找到实现类的全限定名，然后通过反射机制实例化实现类，即约定（约定存储位置为META-INF/service与接口为文件名实现类为文件内容）与反射（通过全限定名动态加载类）。  
+SPI应用十分广泛，像是Slf4j、JDBC、SpringBoot自动配置等都是通过SPI机制实现的。
 
 -----
 ## Prerequisites
