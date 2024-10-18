@@ -1,0 +1,18 @@
+# Project exclude paths
+/logger-provider-interface/target/
+/logger-provider-interface/aopalliance/
+/logger-provider-interface/commons-io/
+/logger-provider-interface/com/
+/logger-provider-interface/javax/
+/logger-provider-interface/net/
+/logger-provider-interface/org/
+/logger-service/target/
+/logger-service/aopalliance/
+/logger-service/commons-io/
+/logger-service/com/
+/logger-service/javax/
+/logger-service/org/
+/logger-service/net/
+/spi/target/
+.idea
+spidemo.iml
